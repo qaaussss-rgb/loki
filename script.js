@@ -1,36 +1,30 @@
 // Функция для переключения вкладок
 function openTab(tabId) {
-    let contents = document.querySelectorAll('.tab-content');
+    const contents = document.querySelectorAll('.tab-content');
     contents.forEach(content => content.classList.remove('active'));
     
-    let buttons = document.querySelectorAll('.tab-btn');
+    const buttons = document.querySelectorAll('.tab-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     
     document.getElementById(tabId).classList.add('active');
     event.currentTarget.classList.add('active');
 }
 
-// Функция надежного автоматического копирования скрипта Stellar Hub
-function copyScript() {
-    const textToCopy = 'loadstring(game:HttpGet("https://pandauth.com"))()\nloadstring(game:HttpGet("https://pandadevelopment.net"))()';
-    
-    const textarea = document.createElement("textarea");
-    textarea.value = textToCopy;
-    textarea.style.position = "fixed"; 
-    document.body.appendChild(textarea);
-    
-    textarea.select();
-    
-    try {
-        const successful = document.execCommand("copy");
-        if (successful) {
-            alert("Скрипт Stellar Hub успешно скопирован в буфер обмена!");
-        } else {
-            alert("Не удалось скопировать автоматически. Попробуйте еще раз.");
-        }
-    } catch (err) {
-        alert("Ошибка при копировании: " + err);
+// Функция для копирования скриптов
+function copyScript(scriptType) {
+    let scriptText = "";
+
+    if (scriptType === 'stellar') {
+        scriptText = 'loadstring(game:HttpGet("https://githubusercontent.com"))()'; 
+    } else if (scriptType === 'rivals') {
+        // ТОТ САМЫЙ СКРИПТ, КОТОРЫЙ ТЫ СКИЗАЛ
+        scriptText = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.luau"))()';
     }
-    
-    document.body.removeChild(textarea);
+
+    // Копирование в буфер
+    navigator.clipboard.writeText(scriptText).then(() => {
+        alert('Скрипт успешно скопирован!');
+    }).catch(err => {
+        console.error('Ошибка при копировании: ', err);
+    });
 }
