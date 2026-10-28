@@ -1,0 +1,98 @@
+/* Общие стили для темного фона */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Стили вкладок (кнопок сверху) */
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #333;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    color: #888;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    color: #fff;
+}
+
+.tab-btn.active {
+    color: #00ffff;
+    border-bottom: 3px solid #00ffff;
+}
+
+/* Управление видимостью вкладок */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Карточки внутри вкладок */
+.script-card {
+    background-color: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    margin-top: 15px;
+}
+
+.script-card h3 {
+    margin-top: 0;
+    color: #00ffff;
+}
+
+/* Кнопка */
+.copy-btn {
+    background-color: #00ffff;
+    color: #121212;
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+    width: 100%;
+}
+
+.copy-btn:hover {
+    background-color: #00cccc;
+    transform: scale(1.02);
+}
+
+/* Обертка ссылки для скачивания инжектора */
+.download-link {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
