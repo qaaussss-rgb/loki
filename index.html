@@ -18,10 +18,19 @@
         <!-- Содержимое вкладки со Скриптами -->
         <div id="scripts" class="tab-content active">
             <h2>Скрипты для Roblox</h2>
+            
+            <!-- Карточка Stellar Hub -->
             <div class="script-card">
                 <h3>Stellar Hub</h3>
                 <p>Популярный многофункциональный скрипт.</p>
-                <button class="copy-btn" onclick="copyScript()">Копировать скрипт Stellar Hub</button>
+                <button class="copy-btn" onclick="copyScript('stellar')">Копировать скрипт Stellar Hub</button>
+            </div>
+
+            <!-- НОВОЕ ОБНОВЛЕНИЕ: Карточка Rivals -->
+            <div class="script-card">
+                <h3>Kiciahook (Rivals)</h3>
+                <p>Актуальный и мощный скрипт для режима Rivals.</p>
+                <button class="copy-btn" onclick="navigator.clipboard.writeText('loadstring(game:HttpGet(\'https://githubusercontent.com\'))()'); alert('Скрипт Rivals скопирован!');">Копировать скрипт Rivals</button>
             </div>
         </div>
 
