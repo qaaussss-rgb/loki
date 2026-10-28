@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Scripts & Injectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Кнопки переключения вкладок -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('scripts')">Скрипты на Roblox</button>
+            <button class="tab-btn" onclick="openTab('injectors')">Инжектор Real</button>
+        </div>
+
+        <!-- Содержимое вкладки со Скриптами -->
+        <div id="scripts" class="tab-content active">
+            <h2>Скрипты для Roblox</h2>
+            <div class="script-card">
+                <h3>Stellar Hub</h3>
+                <p>Популярный многофункциональный скрипт.</p>
+                <button class="copy-btn" onclick="toggleScriptArea()">Показать / скрыть скрипт</button>
+                
+                <!-- Блок со скриптом, который будет открываться -->
+                <div id="scriptContainer" style="display: none; margin-top: 15px;">
+                    <p style="font-size: 13px; color: #888; margin-bottom: 5px;">Выделите текст ниже и скопируйте его самостоятельно:</p>
+                    <textarea id="scriptText" readonly style="width: 100%; height: 100px; background-color: #1a1a1a; color: #00ffff; border: 1px solid #333; border-radius: 6px; padding: 10px; font-family: monospace; resize: none; box-sizing: border-box;"></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Содержимое вкладки с Инжектором -->
+        <div id="injectors" class="tab-content">
+            <h2>Инжекторы</h2>
+            <div class="script-card">
+                <h3>Real Injector</h3>
+                <p>Здесь будет информация или ссылка на скачивание инжектора.</p>
+                <button class="copy-btn" disabled>Скачать (Скоро)</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
