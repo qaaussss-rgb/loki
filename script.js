@@ -12,20 +12,16 @@ function openTab(tabId) {
 
 // Функция надежного автоматического копирования скрипта Stellar Hub
 function copyScript() {
-    // Две рабочие версии скрипта Stellar Hub, которые прислали ранее
     const textToCopy = 'loadstring(game:HttpGet("https://pandauth.com"))()\nloadstring(game:HttpGet("https://pandadevelopment.net"))()';
     
-    // Создаем временное невидимое текстовое поле
     const textarea = document.createElement("textarea");
     textarea.value = textToCopy;
     textarea.style.position = "fixed"; 
     document.body.appendChild(textarea);
     
-    // Автоматически выделяем текст внутри него
     textarea.select();
     
     try {
-        // Выполняем команду копирования в буфер обмена
         const successful = document.execCommand("copy");
         if (successful) {
             alert("Скрипт Stellar Hub успешно скопирован в буфер обмена!");
@@ -36,6 +32,5 @@ function copyScript() {
         alert("Ошибка при копировании: " + err);
     }
     
-    // Удаляем временное поле со страницы
     document.body.removeChild(textarea);
 }
