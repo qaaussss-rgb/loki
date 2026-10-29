@@ -19,36 +19,45 @@
         <div id="scripts" class="tab-content active">
             <h2>Скрипты для Roblox</h2>
             
-            <!-- Карточка Stellar Hub -->
+            <!-- Карточка Stellar Hub (ОБНОВЛЕННЫЙ СКРИПТ) -->
             <div class="script-card">
                 <h3>Stellar Hub</h3>
                 <p>Популярный многофункциональный скрипт. Обновленная рабочая версия!</p>
-                <button class="copy-btn" onclick="copyCustomScript('stellar')">Копировать скрипт Stellar Hub</button>
+                <button class="copy-btn" onclick="navigator.clipboard.writeText('loadstring(game:HttpGet("https://vss.pandadevelopment.net/virtual/file/f6d0fcaf4ac94b19"))()'); alert('Скрипт Stellar Hub скопирован!');">Копировать скрипт Stellar Hub</button>
             </div>
 
-            <!-- Карточка Kiciahook (Rivals) -->
+            <!-- Карточка Rivals (СТРОГО БЕЗ ИЗМЕНЕНИЙ) -->
             <div class="script-card">
                 <h3>Kiciahook (Rivals)</h3>
-                <p>Актуальный и мощный скрипт для режима Rivals. Без изменений.</p>
-                <button class="copy-btn" onclick="copyCustomScript('rivals')">Копировать скрипт Rivals</button>
+                <p>Актуальный и мощный скрипт для режима Rivals.</p>
+                <button class="copy-btn" onclick="navigator.clipboard.writeText('loadstring(game:HttpGet("https://raw.githubusercontent.com/kiciahook/kiciahook/refs/heads/main/loader.luau"))()'); alert('Скрипт Rivals скопирован!');">Копировать скрипт Rivals</button>
             </div>
 
-            <!-- Карточка Zamlcrack -->
+            <!-- Карточка Zamlcrack (ПЕРЕИМЕНОВАНО НА АНГЛИЙСКИЙ) -->
             <div class="script-card">
                 <h3>Zamlcrack</h3>
                 <p>Мощный скрипт с визуальными эффектами, Legit/Rage функциями и кастомизацией.</p>
-                <button class="copy-btn" onclick="copyCustomScript('zamlcrack')">Копировать скрипт Zamlcrack</button>
+                <button class="copy-btn" onclick="navigator.clipboard.writeText('loadstring(game:HttpGet("https://raw.githubusercontent.com/whotner/Roblox/refs/heads/main/zaml"))()'); alert('Скрипт Zamlcrack скопирован!');">Копировать скрипт Zamlcrack</button>
             </div>
 
-            <!-- Карточка Twinkhook с ключом -->
+            <!-- НОВОЕ ОБНОВЛЕНИЕ: Карточка Twinkhook + КЛЮЧ -->
             <div class="script-card">
                 <h3>Twinkhook</h3>
                 <p>Отличный скрипт для Doors и Jailbreak. Требуется ключ для активации.</p>
                 <div class="key-zone" style="margin-bottom: 10px; padding: 5px; background: rgba(255,255,255,0.1); border-radius: 4px; font-size: 14px;">
-                    <strong>Ключ:</strong> <span>DOORSMV</span>
+                    <strong>Ключ:</strong> <span id="twink-key">DOORSMV</span>
                 </div>
-                <button class="copy-btn" style="margin-bottom: 5px;" onclick="copyCustomScript('twinkhook')">Копировать скрипт Twinkhook</button>
-                <button class="copy-btn" style="background: #3a3f50;" onclick="copyCustomKey('DOORSMV')">Скопировать Ключ</button>
+                <button class="copy-btn" style="margin-bottom: 5px;" onclick="navigator.clipboard.writeText('-- [[ Rscripts Risk Notice ]]
+-- This script is not verified by rscripts.net. Deal with caution.
+--
+-- Stay safe:
+--   • Never log in on unofficial Roblox sites or lookalike domains.
+--   • Real Roblox links use roblox.com (check the .com ending).
+--   • Treat fake Roblox login / "claim reward" pages as phishing.
+-- [[ End Rscripts Risk Notice ]]
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sillyleo67/Doors/refs/heads/main/Twinkhook.lua"))()'); alert('Скрипт Twinkhook скопирован!');">Копировать скрипт Twinkhook</button>
+                <button class="copy-btn" style="background: #3a3f50;" onclick="navigator.clipboard.writeText('DOORSMV'); alert('Ключ DOORSMV скопирован!');">Скопировать Ключ</button>
             </div>
         </div>
 
@@ -65,39 +74,6 @@
         </div>
     </div>
 
-    <!-- Встроенные функции, чтобы сайт не зависел от внешних файлов и кэша -->
-    <script>
-        // Функция копирования скриптов (все ссылки теперь четко видны здесь)
-        function copyCustomScript(type) {
-            let text = "";
-            let name = "";
-            
-            if (type === 'stellar') {
-                text = 'loadstring(game:HttpGet("https://pandauth.com"))()';
-                name = 'Stellar Hub';
-            } else if (type === 'rivals') {
-                text = 'loadstring(game:HttpGet("https://githubusercontent.com"))()';
-                name = 'Rivals';
-            } else if (type === 'zamlcrack') {
-                text = 'loadstring(game:HttpGet("https://githubusercontent.com"))()';
-                name = 'Zamlcrack';
-            } else if (type === 'twinkhook') {
-                text = 'loadstring(game:HttpGet("https://githubusercontent.com"))()';
-                name = 'Twinkhook';
-            }
-            
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Скрипт ' + name + ' успешно скопирован!');
-            });
-        }
-
-        // Функция копирования ключей
-        function copyCustomKey(key) {
-            navigator.clipboard.writeText(key).then(() => {
-                alert('Ключ ' + key + ' успешно скопирован!');
-            });
-        }
-    </script>
     <script src="script.js"></script>
 </body>
 </html>
